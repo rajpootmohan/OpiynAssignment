@@ -11,6 +11,7 @@ class ItemsController < ApplicationController
     end
     respond_to do |format|
       format.json { render json: result }
+      format.html
     end
   end
 
@@ -20,6 +21,7 @@ class ItemsController < ApplicationController
     result = { :id => item.id, :title => item.title, :image_url => item.image_url,:createdAt => item.created_at, :reviews => reviews.all}
     respond_to do |format|
       format.json { render json: result }
+      format.html
     end
   end
 
