@@ -4,7 +4,6 @@ class CreateItems < ActiveRecord::Migration
       t.string :id
       t.string :title
       t.string :image_url
-      t.integer :review_counter
       t.datetime :created_at
     end
   end

@@ -11,18 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20160531144411) do
+ActiveRecord::Schema.define(:version => 20160601055359) do
 
   create_table "items", :id => false, :force => true do |t|
     t.string   "id"
     t.string   "title"
     t.string   "image_url"
-    t.integer  "review_counter"
     t.datetime "created_at"
   end
 
   create_table "reviews", :id => false, :force => true do |t|
     t.string   "id"
+    t.string   "item_id"
     t.string   "content"
     t.datetime "created_at"
   end
